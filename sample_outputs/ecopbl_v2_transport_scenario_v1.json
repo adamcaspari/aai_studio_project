@@ -1,0 +1,124 @@
+{
+  "format": "ecopbl-phase12-v2",
+  "approved": true,
+  "version": "v1",
+  "published_at": "2026-11-14T22:16:04.989244+00:00",
+  "project": {
+    "scenario_name": "Move Our Campus",
+    "scenario_description": "A new residence hall and crowded campus roads are changing the morning commute. The campus must serve 600 commuters in one peak hour. In this simplified classroom model, the options serve separate corridors, so their capacities add. All costs, emissions, land values, and limits are illustrative rather than measured campus data.",
+    "mission": "Design a campus commute package that serves at least 600 riders per peak hour, stays within the $2.8 million budget, respects each option's capacity limit, and keeps annual operating CO2 at or below 30 tons. Explain your choices with evidence.",
+    "school_subject": "Environmental Science and Social Studies",
+    "grade": "Grades 6-8",
+    "experts": [
+      "Transportation Planner",
+      "Environmental Scientist",
+      "Community Representative"
+    ],
+    "generation_alternatives": [
+      {
+        "name": "Safer Walking Routes",
+        "cost_per_megawatt": 2500.0,
+        "co2_per_megawatt": 0.0,
+        "land_per_megawatt": 1e-05,
+        "max_allocation": 160.0
+      },
+      {
+        "name": "Protected Bike Lanes",
+        "cost_per_megawatt": 3500.0,
+        "co2_per_megawatt": 0.0,
+        "land_per_megawatt": 2e-05,
+        "max_allocation": 220.0
+      },
+      {
+        "name": "Electric Shuttle",
+        "cost_per_megawatt": 6000.0,
+        "co2_per_megawatt": 0.03,
+        "land_per_megawatt": 5e-06,
+        "max_allocation": 200.0
+      },
+      {
+        "name": "Park-and-Ride Bus",
+        "cost_per_megawatt": 5000.0,
+        "co2_per_megawatt": 0.15,
+        "land_per_megawatt": 1e-05,
+        "max_allocation": 180.0
+      },
+      {
+        "name": "Diesel Shuttle",
+        "cost_per_megawatt": 4500.0,
+        "co2_per_megawatt": 0.3,
+        "land_per_megawatt": 5e-06,
+        "max_allocation": 220.0
+      }
+    ],
+    "budget": 2800000.0,
+    "required_generation": 600.0,
+    "unit_label": "riders/hour",
+    "extra_constraints": [
+      {
+        "metric": "co2",
+        "value": 30.0,
+        "label": "Annual operating CO2"
+      }
+    ],
+    "comprehension_questions": [
+      {
+        "kind": "multiple_choice",
+        "prompt": "How many commuters must the package serve in one peak hour?",
+        "options": [
+          "300 riders",
+          "600 riders",
+          "900 riders"
+        ],
+        "correct_option": 1
+      },
+      {
+        "kind": "multiple_choice",
+        "prompt": "Why can the option capacities be added in this classroom model?",
+        "options": [
+          "They serve separate corridors",
+          "All commuters use every option",
+          "The budget has no limit"
+        ],
+        "correct_option": 0
+      }
+    ],
+    "reflection_questions": [
+      "What was your final commute package, and how did it differ from your first plan?",
+      "Which tradeoff between cost, capacity, emissions, and access was hardest?",
+      "What evidence, expert advice, or event changed your mind?"
+    ],
+    "rubric": [
+      {
+        "criterion": "Meets the constraints",
+        "levels": [
+          "Misses a required limit",
+          "Meets some limits",
+          "Meets all configured limits"
+        ]
+      },
+      {
+        "criterion": "Uses evidence",
+        "levels": [
+          "No evidence",
+          "One reason cites evidence",
+          "Both reasons cite evidence"
+        ]
+      },
+      {
+        "criterion": "Explains tradeoffs",
+        "levels": [
+          "Names an option",
+          "Describes a tradeoff",
+          "Explains the tradeoff and access impact"
+        ]
+      }
+    ],
+    "event": {
+      "mode": "preset",
+      "label": "A new residence hall opens",
+      "description": "More students commute during the morning peak hour, increasing demand by 10%.",
+      "demand_multiplier": 1.1
+    }
+  }
+}

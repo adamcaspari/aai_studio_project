@@ -1,0 +1,112 @@
+{
+  "format": "ecopbl-phase12-v2",
+  "approved": true,
+  "version": "v1",
+  "published_at": "2026-11-14T21:57:40.112465+00:00",
+  "project": {
+    "scenario_name": "Greenfield Energy Transition",
+    "scenario_description": "Greenfield has relied on a coal power plant for electricity. The city plans to close it and needs a replacement that considers cost and environmental effects.",
+    "mission": "Design a plan to replace the retiring coal plant. Choose the MW to build from each option, stay within the budget, meet the required capacity, and justify the plan with evidence.",
+    "school_subject": "Environmental Science",
+    "grade": "Grades 6-8",
+    "experts": [
+      "Environmental Scientist",
+      "Energy Engineer",
+      "Community Representative"
+    ],
+    "generation_alternatives": [
+      {
+        "name": "Solar Power",
+        "cost_per_megawatt": 1000000.0,
+        "co2_per_megawatt": 0.005,
+        "land_per_megawatt": 0.25
+      },
+      {
+        "name": "Wind Power",
+        "cost_per_megawatt": 1500000.0,
+        "co2_per_megawatt": 0.01,
+        "land_per_megawatt": 0.5
+      },
+      {
+        "name": "Hydro Power",
+        "cost_per_megawatt": 2000000.0,
+        "co2_per_megawatt": 0.001,
+        "land_per_megawatt": 0.1
+      },
+      {
+        "name": "Natural Gas",
+        "cost_per_megawatt": 800000.0,
+        "co2_per_megawatt": 0.5,
+        "land_per_megawatt": 0.05
+      },
+      {
+        "name": "Nuclear Power",
+        "cost_per_megawatt": 5000000.0,
+        "co2_per_megawatt": 0.002,
+        "land_per_megawatt": 0.01
+      }
+    ],
+    "budget": 100000000.0,
+    "required_generation": 100.0,
+    "extra_constraints": [],
+    "comprehension_questions": [
+      {
+        "kind": "multiple_choice",
+        "prompt": "How many megawatts must the plan replace?",
+        "options": [
+          "50 MW",
+          "100 MW",
+          "200 MW"
+        ],
+        "correct_option": 1
+      },
+      {
+        "kind": "multiple_choice",
+        "prompt": "Which fact-card number shows construction cost?",
+        "options": [
+          "CO2 per MW",
+          "Cost per MW",
+          "Land per MW"
+        ],
+        "correct_option": 1
+      }
+    ],
+    "reflection_questions": [
+      "What was your final plan, and how did it differ from your first plan?",
+      "Which tradeoff was hardest, and why?",
+      "What evidence, advice, or event changed your mind?"
+    ],
+    "rubric": [
+      {
+        "criterion": "Meets the targets",
+        "levels": [
+          "Misses budget or capacity",
+          "Meets one target",
+          "Meets both targets"
+        ]
+      },
+      {
+        "criterion": "Uses evidence",
+        "levels": [
+          "No evidence",
+          "One reason cites evidence",
+          "Both reasons cite evidence"
+        ]
+      },
+      {
+        "criterion": "Reflection",
+        "levels": [
+          "Short answer",
+          "Describes events",
+          "Explains tradeoffs and changes"
+        ]
+      }
+    ],
+    "event": {
+      "mode": "preset",
+      "label": "A severe heatwave",
+      "description": "A heatwave raises electricity demand across Greenfield.",
+      "demand_multiplier": 1.1
+    }
+  }
+}

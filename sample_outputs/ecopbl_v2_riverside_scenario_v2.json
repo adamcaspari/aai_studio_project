@@ -1,0 +1,124 @@
+{
+  "format": "ecopbl-phase12-v2",
+  "approved": true,
+  "version": "v2",
+  "published_at": "2026-11-14T22:30:52.884661+00:00",
+  "project": {
+    "scenario_name": "Riverside Water Supply",
+    "scenario_description": "Riverside faces higher water use during a dry summer. The town needs 900 cubic meters of treated drinking water each day. In this simplified classroom model, each option serves a separate service zone, so their capacities add. All options are assumed to meet drinking-water quality requirements. All figures are illustrative, not engineering estimates.",
+    "mission": "Build a water-supply package that provides at least 900 m3/day, costs no more than $3.9 million, respects each option's capacity limit, and keeps modeled annual operating CO2 at or below 60 tons. Explain how your choices balance cost, emissions, land, and reliability.",
+    "school_subject": "Environmental Science and Engineering",
+    "grade": "Grades 6-8",
+    "experts": [
+      "Water System Engineer",
+      "Environmental Scientist",
+      "Community Representative"
+    ],
+    "generation_alternatives": [
+      {
+        "name": "Treatment Plant Expansion",
+        "cost_per_megawatt": 3000.0,
+        "co2_per_megawatt": 0.04,
+        "land_per_megawatt": 1e-05,
+        "max_allocation": 400.0
+      },
+      {
+        "name": "Groundwater Wells",
+        "cost_per_megawatt": 3500.0,
+        "co2_per_megawatt": 0.07,
+        "land_per_megawatt": 4e-06,
+        "max_allocation": 300.0
+      },
+      {
+        "name": "Modular Filtration",
+        "cost_per_megawatt": 5000.0,
+        "co2_per_megawatt": 0.03,
+        "land_per_megawatt": 3e-06,
+        "max_allocation": 350.0
+      },
+      {
+        "name": "Solar-Assisted Treatment",
+        "cost_per_megawatt": 5500.0,
+        "co2_per_megawatt": 0.01,
+        "land_per_megawatt": 8e-06,
+        "max_allocation": 250.0
+      },
+      {
+        "name": "Desalination Pilot",
+        "cost_per_megawatt": 7000.0,
+        "co2_per_megawatt": 0.2,
+        "land_per_megawatt": 4e-06,
+        "max_allocation": 200.0
+      }
+    ],
+    "budget": 3900000.0,
+    "required_generation": 900.0,
+    "unit_label": "m3/day",
+    "extra_constraints": [
+      {
+        "metric": "co2",
+        "value": 60.0,
+        "label": "Annual operating CO2"
+      }
+    ],
+    "comprehension_questions": [
+      {
+        "kind": "multiple_choice",
+        "prompt": "How much treated water must Riverside provide each day?",
+        "options": [
+          "500 m3/day",
+          "900 m3/day",
+          "1,500 m3/day"
+        ],
+        "correct_option": 1
+      },
+      {
+        "kind": "multiple_choice",
+        "prompt": "What assumption lets the option capacities add in this model?",
+        "options": [
+          "They serve separate service zones",
+          "All water is counted twice",
+          "There is no budget"
+        ],
+        "correct_option": 0
+      }
+    ],
+    "reflection_questions": [
+      "What water-supply package did you choose, and how did it change?",
+      "Which tradeoff between cost, emissions, land, and reliability was hardest?",
+      "What fact card, expert advice, or event changed your thinking?"
+    ],
+    "rubric": [
+      {
+        "criterion": "Meets the limits",
+        "levels": [
+          "Misses a target",
+          "Meets some limits",
+          "Meets all configured limits"
+        ]
+      },
+      {
+        "criterion": "Uses evidence",
+        "levels": [
+          "No evidence",
+          "One reason cites evidence",
+          "Both reasons cite evidence"
+        ]
+      },
+      {
+        "criterion": "Explains tradeoffs",
+        "levels": [
+          "Names options",
+          "Describes a tradeoff",
+          "Explains cost and environmental impacts"
+        ]
+      }
+    ],
+    "event": {
+      "mode": "preset",
+      "label": "A dry-season population increase",
+      "description": "More residents need treated water, increasing daily demand by 10%.",
+      "demand_multiplier": 1.1
+    }
+  }
+}

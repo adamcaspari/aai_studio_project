@@ -1,0 +1,123 @@
+{
+  "format": "ecopbl-phase12-v2",
+  "approved": true,
+  "version": "v1",
+  "published_at": "2026-11-14T22:33:04.396501+00:00",
+  "project": {
+    "scenario_name": "Waste-Free Campus",
+    "scenario_description": "A campus wants to divert 1,000 kilograms of material from landfill each day. In this simplified classroom model, each option handles a separate sorted material stream, so capacities add without counting the same waste twice. The figures describe operating emissions and project cost; they do not estimate avoided landfill emissions. All parameters are illustrative.",
+    "mission": "Choose facilities that divert at least 1,000 kg/day, stay within the $1.35 million budget, respect each stream limit, and keep modeled annual operating CO2 at or below 5 tons. Use the fact cards to justify the mix.",
+    "school_subject": "Environmental Science and Mathematics",
+    "grade": "Grades 6-8",
+    "experts": [
+      "Environmental Scientist",
+      "Community Representative"
+    ],
+    "generation_alternatives": [
+      {
+        "name": "Food Scraps Composting",
+        "cost_per_megawatt": 1200.0,
+        "co2_per_megawatt": 0.005,
+        "land_per_megawatt": 1e-05,
+        "max_allocation": 350.0
+      },
+      {
+        "name": "Anaerobic Digestion",
+        "cost_per_megawatt": 1800.0,
+        "co2_per_megawatt": 0.012,
+        "land_per_megawatt": 4e-06,
+        "max_allocation": 300.0
+      },
+      {
+        "name": "Paper Recycling",
+        "cost_per_megawatt": 1000.0,
+        "co2_per_megawatt": 0.003,
+        "land_per_megawatt": 3e-06,
+        "max_allocation": 400.0
+      },
+      {
+        "name": "Container Recycling",
+        "cost_per_megawatt": 1300.0,
+        "co2_per_megawatt": 0.006,
+        "land_per_megawatt": 3e-06,
+        "max_allocation": 300.0
+      },
+      {
+        "name": "Textile Reuse",
+        "cost_per_megawatt": 1500.0,
+        "co2_per_megawatt": 0.002,
+        "land_per_megawatt": 2e-06,
+        "max_allocation": 150.0
+      }
+    ],
+    "budget": 1350000.0,
+    "required_generation": 1000.0,
+    "unit_label": "kg/day",
+    "extra_constraints": [
+      {
+        "metric": "co2",
+        "value": 5.0,
+        "label": "Annual operating CO2"
+      }
+    ],
+    "comprehension_questions": [
+      {
+        "kind": "multiple_choice",
+        "prompt": "How much material must the plan divert each day?",
+        "options": [
+          "500 kg/day",
+          "1,000 kg/day",
+          "2,000 kg/day"
+        ],
+        "correct_option": 1
+      },
+      {
+        "kind": "multiple_choice",
+        "prompt": "Why is the same waste not counted twice?",
+        "options": [
+          "Streams are sorted and separate",
+          "Each option has zero cost",
+          "There is no capacity limit"
+        ],
+        "correct_option": 0
+      }
+    ],
+    "reflection_questions": [
+      "Which material streams did your final package cover?",
+      "How did cost, operating emissions, and land needs affect your choices?",
+      "What would you revise after the campus grows?"
+    ],
+    "rubric": [
+      {
+        "criterion": "Meets the limits",
+        "levels": [
+          "Misses a target",
+          "Meets some limits",
+          "Meets all configured limits"
+        ]
+      },
+      {
+        "criterion": "Uses evidence",
+        "levels": [
+          "No evidence",
+          "One fact cited",
+          "Two distinct facts cited"
+        ]
+      },
+      {
+        "criterion": "Explains tradeoffs",
+        "levels": [
+          "Names options",
+          "Describes a tradeoff",
+          "Explains tradeoffs and revisions"
+        ]
+      }
+    ],
+    "event": {
+      "mode": "preset",
+      "label": "A new residence hall opens",
+      "description": "More students produce 10% more sorted material each day.",
+      "demand_multiplier": 1.1
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "scenario_name": "Meals for a Growing School",
+  "school_subject": "Social Studies and Environmental Science",
+  "grade": "Grades 6-8",
+  "scenario_description": "A school district must serve 800 lunches each day across separate school sites. Each option serves a different group of students, so meal capacities add in this simplified classroom model. All options are assumed to meet nutrition and food-safety requirements; those standards are outside this numeric simulation. Costs, operating emissions, land, and capacity limits are illustrative.",
+  "mission": "Design a meal-service package for at least 800 meals/day within a $2 million setup budget. Respect each option's capacity limit and keep modeled annual operating CO2 at or below 45 tons. Explain the cost and access tradeoffs.",
+  "budget": 2000000.0,
+  "required_generation": 800.0,
+  "unit_label": "meals/day",
+  "sources": [
+    {
+      "name": "Central Kitchen",
+      "cost_per_megawatt": 2500,
+      "co2_per_megawatt": 0.04,
+      "land_per_megawatt": 4e-06,
+      "max_allocation": 350
+    },
+    {
+      "name": "Satellite Kitchen",
+      "cost_per_megawatt": 3000,
+      "co2_per_megawatt": 0.025,
+      "land_per_megawatt": 3e-06,
+      "max_allocation": 250
+    },
+    {
+      "name": "Electric Food Truck",
+      "cost_per_megawatt": 2200,
+      "co2_per_megawatt": 0.035,
+      "land_per_megawatt": 2e-06,
+      "max_allocation": 200
+    },
+    {
+      "name": "Community Kitchen Partnership",
+      "cost_per_megawatt": 1800,
+      "co2_per_megawatt": 0.03,
+      "land_per_megawatt": 1e-06,
+      "max_allocation": 180
+    },
+    {
+      "name": "Gas Food Truck",
+      "cost_per_megawatt": 1800,
+      "co2_per_megawatt": 0.09,
+      "land_per_megawatt": 2e-06,
+      "max_allocation": 200
+    }
+  ],
+  "extra_constraints": [
+    {
+      "metric": "co2",
+      "value": 45,
+      "label": "Annual operating CO2"
+    }
+  ],
+  "experts": [
+    "Community Representative",
+    "Environmental Scientist"
+  ],
+  "comprehension_questions": [
+    {
+      "kind": "multiple_choice",
+      "prompt": "How many lunches must be served each day?",
+      "options": [
+        "400 meals",
+        "800 meals",
+        "1,200 meals"
+      ],
+      "correct_option": 1
+    },
+    {
+      "kind": "multiple_choice",
+      "prompt": "Which condition is assumed for every meal-service option?",
+      "options": [
+        "Nutrition and food-safety requirements are met",
+        "Every option is free",
+        "Each student receives two lunches"
+      ],
+      "correct_option": 0
+    }
+  ],
+  "reflection_questions": [
+    "How does your final package serve the separate school sites?",
+    "Which cost, access, and operating-emissions tradeoff mattered most?",
+    "How would you revise the plan if demand rose?"
+  ],
+  "rubric": [
+    {
+      "criterion": "Meets the limits",
+      "levels": [
+        "Misses a target",
+        "Meets some limits",
+        "Meets all configured limits"
+      ]
+    },
+    {
+      "criterion": "Uses evidence",
+      "levels": [
+        "No evidence",
+        "One reason cites evidence",
+        "Both reasons cite evidence"
+      ]
+    },
+    {
+      "criterion": "Considers access",
+      "levels": [
+        "No access discussion",
+        "Names a site need",
+        "Explains access across sites"
+      ]
+    }
+  ],
+  "event": {
+    "mode": "preset",
+    "label": "A new school wing opens",
+    "description": "The new wing increases lunch demand by 10%.",
+    "demand_multiplier": 1.1
+  }
+}
