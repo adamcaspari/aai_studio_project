@@ -14,9 +14,7 @@ from textwrap import dedent
 
 import requests
 import pandas as pd
-import matplotlib.pyplot as plt
 from pydantic import BaseModel, Field, ValidationError
-from IPython.display import display, Markdown
 from dataclasses import dataclass, asdict
 import streamlit as st
 
